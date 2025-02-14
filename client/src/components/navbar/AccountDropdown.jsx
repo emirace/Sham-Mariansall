@@ -49,12 +49,12 @@ function AccountDropdown() {
     .filter((item) => item.priority)
     .map((item, index) => (
       <DropdownItem
-        to={item.url}
-        as={Link}
-        onClick={() => closeNav()}
+        // to={item.url}
+        // as={Link}
+        // onClick={() => closeNav()}
         key={index}
-        className="capitalize py-2 px-4 md:px-6"
-        startContent={item.icon}
+        // className="capitalize py-2 px-4 md:px-6"
+        // startContent={item.icon}
       >
         {t(item.title)}
       </DropdownItem>
@@ -63,9 +63,10 @@ function AccountDropdown() {
   // Rendering the account dropdown component
   return (
     <Dropdown placement="bottom-end" className="dropdown">
-      {/* <DropdownTrigger>
-        <Avatar radius="md" as="button" className="transition-transform" />
-      </DropdownTrigger> */}
+      <DropdownTrigger>
+        {/* <Avatar radius="md" as="button" className="transition-transform" /> */}
+        <div>hello</div>
+      </DropdownTrigger>
 
       <DropdownMenu aria-label="Profile Actions" variant="flat">
         {/* My Account dropdown item */}

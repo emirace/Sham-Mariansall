@@ -90,7 +90,7 @@ const cartStore = create((set) => ({
         files.push(item.files.length === 1 ? item.files[0] : item.files[1])
       );
       const response = await axios.post(
-        "${import.meta.env.VITE_SERVER_URL}/download-product",
+        `${import.meta.env.VITE_SERVER_URL}/download-product`,
         {
           filenames: files,
         },
@@ -134,7 +134,7 @@ const cartStore = create((set) => ({
     const { transformCartData, cartList } = cartStore.getState();
     try {
       const response = await axios.post(
-        "${import.meta.env.VITE_SERVER_URL}/create-checkout-session",
+        `${import.meta.env.VITE_SERVER_URL}/create-checkout-session`,
         transformCartData(customerId, cartList),
         {
           headers: {
