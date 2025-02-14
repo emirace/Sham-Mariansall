@@ -1,6 +1,7 @@
 // Create express app
 const express = require("express");
 const app = express();
+const path = require("path");
 
 // ********************************* App config ********************************
 
@@ -46,15 +47,23 @@ const cartRoutes = require("./routes/cartRoutes");
 const paymentRoutes = require("./routes/paymentRoutes");
 
 const orderRoutes = require("./routes/orderRoutes");
-app.use(productRoutes);
-app.use(blogRoutes);
-app.use(userRoutes);
-app.use(customerRoutes);
-app.use(categoryRoutes);
-app.use(subcategoryRoutes);
-app.use(orderRoutes);
-app.use(cartRoutes);
-app.use(paymentRoutes);
+app.use("/api", productRoutes);
+app.use("/api", blogRoutes);
+app.use("/api", userRoutes);
+app.use("/api", customerRoutes);
+app.use("/api", categoryRoutes);
+app.use("/api", subcategoryRoutes);
+app.use("/api", orderRoutes);
+app.use("/api", cartRoutes);
+app.use("/api", paymentRoutes);
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "../client/dist")));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "../client/dist", "index.html"));
+  });
+}
 
 // ******************************** App security ********************************
 
