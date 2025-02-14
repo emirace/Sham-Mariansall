@@ -63,10 +63,9 @@ function AccountDropdown() {
   // Rendering the account dropdown component
   return (
     <Dropdown placement="bottom-end" className="dropdown">
-      <DropdownTrigger>
-        {/* <Avatar radius="md" as="button" className="transition-transform" /> */}
-        <div>hello</div>
-      </DropdownTrigger>
+      {/* <DropdownTrigger>
+        <Avatar radius="md" as="button" className="transition-transform" />
+      </DropdownTrigger> */}
 
       <DropdownMenu aria-label="Profile Actions" variant="flat">
         {/* My Account dropdown item */}
