@@ -3,6 +3,8 @@ import { lazy } from "react";
 import Error from "../../components/Error";
 import PaymentSuccess from "../../customer/pages/payment/PaymentSuccess";
 import PaymentFailed from "../../customer/pages/payment/PaymentFailed";
+import Blogs from "../../customer/pages/Blogs";
+import Details from "../../customer/pages/Blogs/detail";
 
 // Lazy-loaded components
 const ClientNavbar = lazy(() =>
@@ -48,6 +50,10 @@ function ClientRoutes() {
 
         {/* About Us page route */}
         <Route path="/about-us" element={<AboutUs />} />
+
+        {/* Blogs route */}
+        <Route path="/blog" element={<Blogs />} />
+        <Route path="/blog/:id" element={<Details />} />
 
         {/* Contact Us page route */}
         <Route path="/contact-us" element={<ContactUs />} />

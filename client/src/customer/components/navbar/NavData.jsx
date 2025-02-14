@@ -9,6 +9,10 @@ const navData = [
     url: "/how-it-works",
   },
   {
+    title: "Blog",
+    url: "/blog",
+  },
+  {
     title: "about us",
     url: "/about-us",
   },

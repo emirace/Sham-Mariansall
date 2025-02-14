@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 import Footer from "../../components/Footer";
 import Features from "./features/Features";
-// import Header from "./header/Header";
+import Header from "./header/Header";
 import Reviews from "./reviews/Reviews";
 import Overview from "./Overview";
 import QuickLinks from "../../components/quick-links/QuickLinks";

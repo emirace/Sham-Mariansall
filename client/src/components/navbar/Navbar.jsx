@@ -61,7 +61,11 @@ function Navbar({ menuItems, endButton }) {
           onClick={() => handleNavButton("home")}
           className="cursor-pointer"
         >
-          <img src="/logo.svg" alt="Markstone logo" className="w-12 lg:w-14" />
+          <img
+            src="/logo-light.svg"
+            alt="Markstone logo"
+            className="w-12 lg:w-14"
+          />
         </Link>
 
         {/* Navigation menu for larger screens */}

@@ -19,11 +19,11 @@ function SwitchLang() {
   const { selectedLang, languages, handleLangSwitch } = mainStore();
 
   // Getting the current language from cookies
-  const currentLang = Cookies.get("lang").substring(0, 2);
+  // const currentLang = Cookies.get("lang").substring(0, 2);
 
   // useEffect to change the language on component mount
   useEffect(() => {
-    i18n.changeLanguage(currentLang);
+    // i18n.changeLanguage(currentLang);
   }, []);
 
   // Destructuring i18n from useTranslation hook
@@ -43,14 +43,13 @@ function SwitchLang() {
       }
       className="capitalize px-4 py-2 md:px-6"
     >
-      {item.lang}
+      {/* {item.lang} */}
     </DropdownItem>
   ));
 
   // Rendering the language switch component
   return (
     <Dropdown placement="bottom-end" className="dropdown">
-      {/* Badge for the currently selected language */}
       <Badge
         isOneChar
         content={
@@ -62,8 +61,7 @@ function SwitchLang() {
         }
         placement="bottom-right"
       >
-        {/* Dropdown trigger button with language icon */}
-        <DropdownTrigger>
+        {/* <DropdownTrigger>
           <Button
             isIconOnly
             color="primary"
@@ -72,7 +70,7 @@ function SwitchLang() {
           >
             <LanguageRoundedIcon className="text-primary dark:text-white" />
           </Button>
-        </DropdownTrigger>
+        </DropdownTrigger> */}
       </Badge>
       {/* Dropdown menu for selecting different languages */}
       <DropdownMenu variant="flat" aria-label="switch language">
