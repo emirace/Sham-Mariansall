@@ -1,6 +1,6 @@
 // Importing necessary components and libraries
 import { useEffect } from "react";
-import productStore from "../../../../../store/products/ProductStore";
+import productStore from "../../../../../store/products/productStore";
 import { Button } from "@nextui-org/react";
 import AddRoundedIcon from "@mui/icons-material/AddRounded";
 import { useTranslation } from "react-i18next";

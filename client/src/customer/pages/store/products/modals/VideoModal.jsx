@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import VolumeUpRoundedIcon from "@mui/icons-material/VolumeUpRounded";
 import VolumeOffRoundedIcon from "@mui/icons-material/VolumeOffRounded";
 import { Button } from "@nextui-org/react";
-import productStore from "../../../../../store/products/ProductStore";
+import productStore from "../../../../../store/products/productStore";
 import { useTranslation } from "react-i18next";
 import AddRoundedIcon from "@mui/icons-material/AddRounded";
 import customerAuthStore from "../../../../../store/authentication/CustomerAuthStore";

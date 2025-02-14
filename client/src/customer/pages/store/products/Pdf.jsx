@@ -4,7 +4,7 @@ import AddRoundedIcon from "@mui/icons-material/AddRounded";
 import PropTypes from "prop-types";
 import { Modal, ModalContent, useDisclosure } from "@nextui-org/react";
 import PdfModal from "./modals/ImageModal"; // Importing the PdfModal component
-import productStore from "../../../../store/products/ProductStore";
+import productStore from "../../../../store/products/productStore";
 import cartStore from "../../../../store/cartStore";
 import customerAuthStore from "../../../../store/authentication/CustomerAuthStore";
 import { useNavigate } from "react-router-dom";

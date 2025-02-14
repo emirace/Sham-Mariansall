@@ -6,7 +6,7 @@ import AudioPlayer from "react-h5-audio-player";
 import AddRoundedIcon from "@mui/icons-material/AddRounded";
 import { Modal, ModalContent, useDisclosure } from "@nextui-org/react";
 import AudioModal from "./modals/AudioModal"; // Importing the AudioModal component
-import productStore from "../../../../store/products/ProductStore";
+import productStore from "../../../../store/products/productStore";
 import customerAuthStore from "../../../../store/authentication/CustomerAuthStore";
 import cartStore from "../../../../store/cartStore";
 import { useNavigate } from "react-router-dom";
