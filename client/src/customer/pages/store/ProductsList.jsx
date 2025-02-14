@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router-dom";
-import productStore from "../../../store/products/ProductStore";
+import productStore from "../../../store/products/productStore";
 import Image from "./products/Image";
 import Audio from "./products/Audio";
 import Font from "./products/Font";
