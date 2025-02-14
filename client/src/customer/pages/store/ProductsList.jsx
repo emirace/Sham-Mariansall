@@ -213,9 +213,12 @@ function ProductsList() {
                 ""
               )
             )}
+        {searchedProduct.length <= 0 && productList.length <= 0 && (
+          <div className="w-full text-center">No product available</div>
+        )}
       </div>
       {/* Render the added message*/}
-      {addedMessage}
+      {/* {addedMessage} */}
     </>
   );
 }

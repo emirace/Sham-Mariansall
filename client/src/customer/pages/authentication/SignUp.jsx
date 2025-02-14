@@ -41,20 +41,21 @@ function SignUp() {
   const handleSignUp = async (e) => {
     e.preventDefault();
 
-    // Execute ReCAPTCHA and get the token
-    const captchaToken = await recaptchaRef.current.executeAsync();
-    recaptchaRef.current.reset();
-    setRecaptchaValue(captchaToken);
-
-    setLoading(true);
-
     try {
+      // Execute ReCAPTCHA and get the token
+      // const captchaToken = await recaptchaRef.current.executeAsync();
+      // recaptchaRef.current.reset();
+      // setRecaptchaValue(captchaToken);
+
+      setLoading(true);
+
       await signUp();
       setVerificationLink(true);
       setLoading(false);
     } catch (error) {
       setVerificationLink(false);
       setLoading(false);
+      console.log(error);
     }
   };
 

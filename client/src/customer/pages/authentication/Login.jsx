@@ -44,9 +44,9 @@ function Login() {
     e.preventDefault();
 
     // Execute ReCAPTCHA and reset it
-    const captchaToken = await recaptchaRef.current.executeAsync();
-    recaptchaRef.current.reset();
-    setRecaptchaValue(captchaToken);
+    // const captchaToken = await recaptchaRef.current.executeAsync();
+    // recaptchaRef.current.reset();
+    // setRecaptchaValue(captchaToken);
 
     // Set loading to true during login attempt
     setLoading(true);

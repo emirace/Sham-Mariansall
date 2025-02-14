@@ -116,7 +116,7 @@ function CartDropdown() {
         showOutline={false}
       >
         {/* Cart icon button */}
-        <PopoverTrigger>
+        {/* <PopoverTrigger>
           <Button
             isIconOnly
             aria-label="Cart"
@@ -124,7 +124,8 @@ function CartDropdown() {
           >
             <ShoppingCartRoundedIcon className="text-primary dark:text-white" />
           </Button>
-        </PopoverTrigger>
+        </PopoverTrigger> */}
+        <ShoppingCartRoundedIcon className="text-primary dark:text-white" />
       </Badge>
       {/* Cart content in the popover */}
       <PopoverContent

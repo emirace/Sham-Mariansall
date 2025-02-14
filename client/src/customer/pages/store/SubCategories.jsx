@@ -58,7 +58,7 @@ function SubCategory() {
       ) : (
         // Displaying Filter and Searchbar when category is not selected or is "all"
         <ul className="flex gap-4 self-end">
-          <Filter />
+          {/* <Filter /> */}
           <Searchbar />
         </ul>
       )}
