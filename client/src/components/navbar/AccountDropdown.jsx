@@ -10,7 +10,7 @@ import {
   DropdownItem,
 } from "@nextui-org/react";
 import { Link, useNavigate } from "react-router-dom";
-import customerAuthStore from "../../store/authentication/customerAuthStore";
+import customerAuthStore from "../../store/authentication/CustomerAuthStore";
 import { googleLogout } from "@react-oauth/google";
 import { useTranslation } from "react-i18next";
 import mainStore from "../../store/mainStore";

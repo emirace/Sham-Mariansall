@@ -5,7 +5,7 @@ import { Button } from "@nextui-org/react";
 import AddRoundedIcon from "@mui/icons-material/AddRounded";
 import { useTranslation } from "react-i18next";
 import cartStore from "../../../../../store/cartStore";
-import customerAuthStore from "../../../../../store/authentication/customerAuthStore";
+import customerAuthStore from "../../../../../store/authentication/CustomerAuthStore";
 import { useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
 
