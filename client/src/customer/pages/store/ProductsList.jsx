@@ -104,9 +104,9 @@ function ProductsList() {
         top: "50px",
       }}
     >
-      <PopoverTrigger>
+      {/* <PopoverTrigger>
         <></>
-      </PopoverTrigger>
+      </PopoverTrigger> */}
       <PopoverContent className="bg-primary text-white flex flex-row gap-2 justify-center items-center p-4">
         <CheckCircleRoundedIcon />
         <p className="text-small font-bold">Item added in your cart</p>

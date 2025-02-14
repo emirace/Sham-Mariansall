@@ -21,12 +21,11 @@ const Filter = () => {
   return (
     // Dropdown component for the filter options
     <Dropdown placement="bottom-start" className="dropdown">
-      <DropdownTrigger>
-        {/* Button to trigger the dropdown, with the filter icon */}
+      {/* <DropdownTrigger>
         <Button variant="flat" isIconOnly color="primary" aria-label="filter">
           <FilterListRoundedIcon />
         </Button>
-      </DropdownTrigger>
+      </DropdownTrigger> */}
       {/* DropdownMenu containing filter options */}
       <DropdownMenu aria-label="Profile Actions" variant="flat">
         {/* DropdownItem for sorting by low to high price */}
