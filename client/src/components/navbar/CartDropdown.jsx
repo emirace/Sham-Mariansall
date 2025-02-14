@@ -11,7 +11,7 @@ import DeleteRoundedIcon from "@mui/icons-material/DeleteRounded";
 import ShoppingCartCheckoutRoundedIcon from "@mui/icons-material/ShoppingCartCheckoutRounded";
 import { Divider } from "@nextui-org/react";
 import { useEffect } from "react";
-import customerAuthStore from "../../store/authentication/customerAuthStore";
+import customerAuthStore from "../../store/authentication/CustomerAuthStore";
 import cartStore from "../../store/cartStore";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
