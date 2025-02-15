@@ -48,16 +48,7 @@ function FirstPage() {
                   </h1>
                 </div>
                 <div>
-                  <div className="text ml-30">
-                    <p>
-                      We back the founders of new forms of network, digital
-                      organisations that harness the{" "}
-                      <span className="text-light fw-600">
-                        talents of individuals
-                      </span>{" "}
-                      for the benefit of the collective.
-                    </p>
-                  </div>
+                  <div className="text ml-30"></div>
                 </div>
               </div>
             </div>
@@ -78,14 +69,14 @@ function FirstPage() {
                 <span className="main-color">successfully</span>
               </h6>
 
-              <Button
+              {/* <Button
                 onClick={onOpen}
                 color="default"
                 className="search-button"
                 startContent={<SearchRoundedIcon />}
               >
                 {t("quick search")}
-              </Button>
+              </Button> */}
               {searchModal}
             </div>
           </div>

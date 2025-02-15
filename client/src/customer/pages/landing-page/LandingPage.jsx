@@ -13,6 +13,8 @@ import Team from "./Team";
 import Testimonials from "./Testimonials";
 import Clients from "./Clients";
 import Marq2 from "./marq/marq2";
+import Services from "./Services";
+import LoadingScreen from "../../../common/loader";
 
 // Define the LandingPage component
 function LandingPage() {
@@ -29,6 +31,7 @@ function LandingPage() {
   return (
     <>
       {/* Container for the entire landing page */}
+      <LoadingScreen />
       <div className="flex">
         {/* QuickLinks component for navigation */}
         <QuickLinks />
@@ -41,13 +44,14 @@ function LandingPage() {
 
           <Marq />
 
-          <Portfolio />
+          {/* <Portfolio /> */}
 
-          <Feat />
+          {/* <Feat /> */}
+          <Services />
 
           <Team />
 
-          <Testimonials />
+          {/* <Testimonials /> */}
 
           <Clients />
 
