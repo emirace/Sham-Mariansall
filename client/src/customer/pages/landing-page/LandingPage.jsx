@@ -1,13 +1,18 @@
 // Import necessary dependencies and components
 import { useEffect } from "react";
 import Footer from "../../components/Footer";
-import Features from "./features/Features";
-import Header from "./header/Header";
-import Reviews from "./reviews/Reviews";
-import Overview from "./Overview";
 import QuickLinks from "../../components/quick-links/QuickLinks";
 import AOS from "aos"; // Import AOS (Animate On Scroll) library
 import "aos/dist/aos.css"; // Import AOS styles
+import Intro from "./intro/Intro";
+import FirstPage from "./firstPage/firstPage";
+import Marq from "./marq/marq";
+import Portfolio from "./portfolio/portfolio";
+import Feat from "./Feat";
+import Team from "./Team";
+import Testimonials from "./Testimonials";
+import Clients from "./Clients";
+import Marq2 from "./marq/marq2";
 
 // Define the LandingPage component
 function LandingPage() {
@@ -29,14 +34,24 @@ function LandingPage() {
         <QuickLinks />
         {/* Main content area with a gradient background */}
         <div className="bg-gradient from-white dark:from-black to-light dark:tog-dark w-full flex flex-col">
-          {/* Header component */}
-          <Header />
-          {/* Reviews component */}
-          <Reviews />
-          {/* Features component */}
-          <Features />
-          {/* Overview component */}
-          <Overview />
+          {/* <Header /> */}
+          <FirstPage />
+
+          <Intro />
+
+          <Marq />
+
+          <Portfolio />
+
+          <Feat />
+
+          <Team />
+
+          <Testimonials />
+
+          <Clients />
+
+          <Marq2 />
         </div>
       </div>
       {/* Footer component */}

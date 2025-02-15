@@ -1,77 +1,129 @@
-import Footer from "../components/Footer";
-import { Input, Textarea, Button } from "@nextui-org/react";
-import SendRoundedIcon from "@mui/icons-material/SendRounded";
-import { useTranslation } from "react-i18next";
+import React from "react";
 
-// Functional component for the Contact Us page
-function ContactUs() {
-  // Destructuring the translation function from react-i18next
-  const { t } = useTranslation();
-
-  // Form for user messages
-  const messageForm = (
-    <div className="flex flex-col gap-4 w-full md:w-1/2 xl:w-1/4">
-      {/* Input field for the subject */}
-      <Input key="inside 1" type="text" label={t("subject")} />
-      {/* Textarea for the message */}
-      <Textarea
-        key="inside 2"
-        label="Message"
-        labelPlacement="outside"
-        placeholder={t("enter your message")}
-      />
-      {/* Button for sending the message */}
-      <Button
-        color="primary"
-        variant="flat"
-        endContent={<SendRoundedIcon />}
-        className="w-fit"
-      >
-        {t("send")}
-      </Button>
-    </div>
-  );
-
-  // URL for the cover image
-  const coverImage =
-    "https://images.pexels.com/photos/8867259/pexels-photo-8867259.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
-
+function Contact() {
   return (
     <>
-      {/* Cover section with gradient overlay */}
-      <div
-        className=" relative after:absolute after:w-full after:h-full after:bg-gradient-to-t after:from-white dark:after:from-black after:to-transparent after:left-0 after:top-0 
-    "
-      >
-        {/* Cover image */}
-        <div className="h-64 md:h-80 lg:h-96 w-full relative after:absolute after:w-full after:h-full after:bg-gradient-to-t after:from-white dark:after:from-black after:to-transparent after:left-0 after:top-0">
-          <img
-            src={coverImage}
-            alt="cover image"
-            loading="lazy"
-            className="absolute h-full w-full object-cover lg:object-center"
-          />
+      <section className="contact section-padding">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-4 valign">
+              <div className="sec-head info-box full-width md-mb80">
+                <div className="phone fz-30 fw-600 underline main-color">
+                  <a href="#0">+1 840 841 25 69</a>
+                </div>
+                <div className="morinfo mt-50 pb-30 bord-thin-bottom">
+                  <h6 className="mb-15">Address</h6>
+                  <p>Besòs 1, 08174 Sant Cugat del Vallès, Barcelona</p>
+                </div>
+                <div className="morinfo mt-30 pb-30 bord-thin-bottom">
+                  <h6 className="mb-15">Email</h6>
+                  <p>Support@UiCamp.com</p>
+                </div>
+
+                <div className="social-icon mt-50">
+                  <a href="#0">
+                    <i className="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="#0">
+                    <i className="fab fa-dribbble"></i>
+                  </a>
+                  <a href="#0">
+                    <i className="fab fa-behance"></i>
+                  </a>
+                  <a href="#0">
+                    <i className="fab fa-instagram"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-7 offset-lg-1 valign">
+              <div className="full-width">
+                <div className="sec-head mb-50">
+                  <h6 className="sub-title main-color mb-15">
+                    Let&lsquo;s Chat
+                  </h6>
+                  <h3 className="text-u ls1">
+                    Send a <span className="fw-200">message</span>
+                  </h3>
+                </div>
+                <form
+                  id="contact-form"
+                  className="form2"
+                  method="post"
+                  action="contact.php"
+                >
+                  <div className="messages"></div>
+
+                  <div className="controls row">
+                    <div className="col-lg-6">
+                      <div className="form-group mb-30">
+                        <input
+                          id="form_name"
+                          type="text"
+                          name="name"
+                          placeholder="Name"
+                          required="required"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="col-lg-6">
+                      <div className="form-group mb-30">
+                        <input
+                          id="form_email"
+                          type="email"
+                          name="email"
+                          placeholder="Email"
+                          required="required"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="col-12">
+                      <div className="form-group mb-30">
+                        <input
+                          id="form_subject"
+                          type="text"
+                          name="subject"
+                          placeholder="Subject"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="col-12">
+                      <div className="form-group">
+                        <textarea
+                          id="form_message"
+                          name="message"
+                          placeholder="Message"
+                          rows="4"
+                          required="required"
+                        ></textarea>
+                      </div>
+                      <div className="mt-30">
+                        <button
+                          type="submit"
+                          className="butn butn-full butn-bord radius-30"
+                        >
+                          <span className="text">Let&lsquo;s Talk</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
-        {/* Heading for the cover section */}
-        <h1 className="w-full absolute top-3/4 left-2/4 -translate-x-2/4 -translate-y-2/4 z-10 font-title capitalize text-center text-3xl md:text-4xl lg:text-5xl text-primary ">
-          {t("contact us")}
-        </h1>
+      </section>
+      <div className="google-map">
+        <iframe
+          id="gmap_canvas"
+          src="https://maps.google.com/maps?q=hollwood&t=&z=11&ie=UTF8&iwloc=&output=embed"
+        ></iframe>
       </div>
-
-      {/* Main content section */}
-      <div className="main-container px-4 lg:px-4 my-12 md:my-16 lg:my-20 flex flex-col md:flex-row justify-center items-start gap-8 md:gap-14 lg:gap-20">
-        {/* Heading for the main content */}
-        <h1 className="text-2xl md:text-3xl lg:text-4xl capitalize max-w-lg">
-          {t("how can we help you")} ?
-        </h1>
-        {/* Render the message form */}
-        {messageForm}
-      </div>
-
-      {/* Footer component */}
-      <Footer />
     </>
   );
 }
 
-export default ContactUs;
+export default Contact;

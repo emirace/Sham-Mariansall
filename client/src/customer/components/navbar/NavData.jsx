@@ -1,7 +1,7 @@
 // Array containing navigation data for the client navbar
 const navData = [
   {
-    title: "store",
+    title: "stock",
     url: "/store",
   },
   {

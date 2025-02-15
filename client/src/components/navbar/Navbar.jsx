@@ -5,7 +5,7 @@ import SwitchMode from "./SwitchMode";
 import SwitchLang from "./SwitchLang";
 import AccountDropdown from "./AccountDropdown";
 import mainStore from "../../store/mainStore";
-import customerAuthStore from "../../store/authentication/CustomerAuthStore";
+import customerAuthStore from "../../store/authentication/customerAuthStore";
 
 import PropTypes from "prop-types";
 import { memo } from "react";
@@ -62,7 +62,7 @@ function Navbar({ menuItems, endButton }) {
           className="cursor-pointer"
         >
           <img
-            src="/logo-light.svg"
+            src="/logo-light.png"
             alt="Markstone logo"
             className="w-12 lg:w-14"
           />
