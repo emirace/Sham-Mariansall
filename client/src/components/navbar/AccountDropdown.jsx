@@ -1,28 +1,19 @@
-// Importing required icons and components from Material-UI and other libraries
-import PowerSettingsNewRoundedIcon from "@mui/icons-material/PowerSettingsNewRounded";
-import accountMenuData from "../../customer/pages/account/menu/MenuData";
-import PersonRoundedIcon from "@mui/icons-material/PersonRounded";
-import {
-  Avatar,
-  Dropdown,
-  DropdownTrigger,
-  DropdownMenu,
-  DropdownItem,
-} from "@nextui-org/react";
 import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 import customerAuthStore from "../../store/authentication/CustomerAuthStore";
 import { googleLogout } from "@react-oauth/google";
 import { useTranslation } from "react-i18next";
 import mainStore from "../../store/mainStore";
+import accountMenuData from "../../customer/pages/account/menu/MenuData";
+// import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-// React functional component for the account dropdown
 function AccountDropdown() {
-  // Destructuring required functions and objects from hooks and stores
   const { logout, googleLoggedIn } = customerAuthStore();
-  const { t } = useTranslation(); // Initialize the useTranslation hook
+  const { t } = useTranslation();
   const navigate = useNavigate();
+  const { closeNav } = mainStore();
+  const [isOpen, setIsOpen] = useState(false);
 
-  // Function to handle regular logout
   const handleLogout = async () => {
     try {
       await logout();
@@ -33,7 +24,6 @@ function AccountDropdown() {
     }
   };
 
-  // Function to handle Google logout
   const handleGoogleLogout = async () => {
     await googleLogout();
     await logout();
@@ -41,60 +31,59 @@ function AccountDropdown() {
     closeNav();
   };
 
-  // Destructuring required function from main store for closing navigation
-  const { closeNav } = mainStore();
-
-  // Creating the dropdown menu items based on accountMenuData
-  const dropdownMenu = accountMenuData
-    .filter((item) => item.priority)
-    .map((item, index) => (
-      <DropdownItem
-        // to={item.url}
-        // as={Link}
-        // onClick={() => closeNav()}
-        key={index}
-        // className="capitalize py-2 px-4 md:px-6"
-        // startContent={item.icon}
-      >
-        {t(item.title)}
-      </DropdownItem>
-    ));
-
-  // Rendering the account dropdown component
   return (
-    <Dropdown placement="bottom-end" className="dropdown">
-      {/* <DropdownTrigger>
-        <Avatar radius="md" as="button" className="transition-transform" />
-      </DropdownTrigger> */}
-
-      <DropdownMenu aria-label="Profile Actions" variant="flat">
-        {/* My Account dropdown item */}
-        <DropdownItem
-          to="/account"
-          as={Link}
-          onClick={() => closeNav()}
-          className="capitalize py-2 px-4 md:px-6 "
-          startContent={<PersonRoundedIcon />}
-        >
-          {t("my account")}
-        </DropdownItem>
-
-        {/* Additional dropdown menu items based on accountMenuData */}
-        {dropdownMenu}
-
-        {/* Logout dropdown item with conditional styling */}
-        <DropdownItem
-          onClick={googleLoggedIn ? handleGoogleLogout : handleLogout}
-          color="danger"
-          className="capitalize py-2 px-4 md:px-6 text-red-600"
-          startContent={<PowerSettingsNewRoundedIcon />}
-        >
-          {t("log out")}
-        </DropdownItem>
-      </DropdownMenu>
-    </Dropdown>
+    <div className="relative z-20 ml-2">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className=" h-10 px-4  rounded-full bg-[#46d1c9] flex items-center justify-center"
+      >
+        Account
+        {/* <ExpandMoreIcon /> */}
+      </button>
+      {isOpen && (
+        <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-300 shadow-md rounded-md">
+          <ul className="py-2 ">
+            <li>
+              <Link
+                to="/account"
+                onClick={() => {
+                  closeNav();
+                  setIsOpen(false);
+                }}
+                className="block px-4 py-2 hover:bg-gray-100"
+              >
+                {t("my account")}
+              </Link>
+            </li>
+            {accountMenuData
+              .filter((item) => item.priority)
+              .map((item, index) => (
+                <li key={index}>
+                  <Link
+                    to={item.url}
+                    onClick={() => {
+                      closeNav();
+                      setIsOpen(false);
+                    }}
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    {t(item.title)}
+                  </Link>
+                </li>
+              ))}
+            <li>
+              <button
+                onClick={googleLoggedIn ? handleGoogleLogout : handleLogout}
+                className="w-full text-left block px-4 py-2 text-red-600 hover:bg-gray-100"
+              >
+                {t("log out")}
+              </button>
+            </li>
+          </ul>
+        </div>
+      )}
+    </div>
   );
 }
 
-// Exporting the AccountDropdown component as the default export
 export default AccountDropdown;

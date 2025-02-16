@@ -56,7 +56,7 @@ function Services() {
     },
   };
   return (
-    <section className="services section-padding">
+    <section className="services section-padding overflow-hidden">
       <div className="container">
         <div className="sec-head mb-80">
           <div className="d-flex align-items-center">

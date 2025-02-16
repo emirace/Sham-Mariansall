@@ -37,7 +37,8 @@ function Navbar({ menuItems, endButton }) {
         <SwitchLang />
         {loggedIn ? (
           <>
-            <CartDropdown /> <AccountDropdown />
+            <CartDropdown />
+            <AccountDropdown />
           </>
         ) : (
           endButton
@@ -50,7 +51,7 @@ function Navbar({ menuItems, endButton }) {
   return (
     <div
       className={`
-        fixed z-50 w-full bg-white dark:bg-dark bg-opacity-40 dark:bg-opacity-30 backdrop-blur-xl overflow-hidden ${
+        fixed z-50 w-full bg-white dark:bg-dark bg-opacity-40 dark:bg-opacity-30 backdrop-blur-xl  ${
           navOpen ? "h-screen nav-h duration-300" : "nav-h nav-open duration-50"
         } `}
     >

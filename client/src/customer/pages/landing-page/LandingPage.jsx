@@ -31,7 +31,7 @@ function LandingPage() {
   return (
     <>
       {/* Container for the entire landing page */}
-      <LoadingScreen />
+      {/* <LoadingScreen /> */}
       <div className="flex">
         {/* QuickLinks component for navigation */}
         <QuickLinks />
