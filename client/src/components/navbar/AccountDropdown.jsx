@@ -35,7 +35,7 @@ function AccountDropdown() {
     <div className="relative z-20 ml-2">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className=" h-10 px-4  rounded-full bg-[#46d1c9] flex items-center justify-center"
+        className=" h-10 px-4  rounded-md bg-[#46d1c9] flex items-center justify-center"
       >
         Account
         {/* <ExpandMoreIcon /> */}

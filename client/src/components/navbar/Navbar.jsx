@@ -33,8 +33,8 @@ function Navbar({ menuItems, endButton }) {
         {menuItems}
       </ul>
       <ul className="flex flex-wrap lg:flex-nowrap justify-center items-center gap-8 lg:gap-4 px-32 lg:px-0">
-        <SwitchMode />
-        <SwitchLang />
+        {/* <SwitchMode />
+        <SwitchLang /> */}
         {loggedIn ? (
           <>
             <CartDropdown />
@@ -65,7 +65,7 @@ function Navbar({ menuItems, endButton }) {
           <img
             src="/logo-light.png"
             alt="Markstone logo"
-            className="w-12 lg:w-14"
+            className="w-12 lg:w-24"
           />
         </Link>
 
