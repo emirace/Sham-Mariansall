@@ -2,8 +2,7 @@
 import React, { useEffect, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
-import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
-import { Modal, Button, useDisclosure } from "@nextui-org/react";
+import { Modal, useDisclosure } from "@nextui-org/react";
 import QuickSearch from "../header/QuickSearch";
 import loadBackgroudImages from "../../../../common/loadBackgroudImages";
 
@@ -34,11 +33,11 @@ function FirstPage() {
     <header
       className="main-header bg-img valign"
       data-background="/assets/imgs/background/bg5.jpg"
-      data-overlay-dark="7"
+      data-overlay-dark="3"
     >
       <div className="container ontop">
         <div className="row">
-          <div className="col-lg-11">
+          <div className="col-lg-11  ">
             <div className="caption">
               <h1>Empowering your</h1>
               <div className="d-flex align-items-end">
@@ -69,14 +68,6 @@ function FirstPage() {
                 <span className="main-color">successfully</span>
               </h6>
 
-              {/* <Button
-                onClick={onOpen}
-                color="default"
-                className="search-button"
-                startContent={<SearchRoundedIcon />}
-              >
-                {t("quick search")}
-              </Button> */}
               {searchModal}
             </div>
           </div>

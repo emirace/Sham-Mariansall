@@ -15,6 +15,8 @@ import Clients from "./Clients";
 import Marq2 from "./marq/marq2";
 import Services from "./Services";
 import LoadingScreen from "../../../common/loader";
+import ProgressScroll from "../../../common/ProgressScroll";
+import Cursor from "../../../common/cusor";
 
 // Define the LandingPage component
 function LandingPage() {
@@ -34,7 +36,9 @@ function LandingPage() {
       {/* <LoadingScreen /> */}
       <div className="flex">
         {/* QuickLinks component for navigation */}
-        <QuickLinks />
+        {/* <QuickLinks /> */}
+        <Cursor />
+        <ProgressScroll />
         {/* Main content area with a gradient background */}
         <div className="bg-gradient from-white dark:from-black to-light dark:tog-dark w-full flex flex-col">
           {/* <Header /> */}
