@@ -1,5 +1,5 @@
 // Import necessary dependencies and components
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import Footer from "../../components/Footer";
 import QuickLinks from "../../components/quick-links/QuickLinks";
 import AOS from "aos"; // Import AOS (Animate On Scroll) library
@@ -20,6 +20,7 @@ import Cursor from "../../../common/cusor";
 
 // Define the LandingPage component
 function LandingPage() {
+  const main = useRef();
   // useEffect hook to initialize AOS and refresh it
   useEffect(() => {
     AOS.init({
@@ -40,7 +41,11 @@ function LandingPage() {
         <Cursor />
         <ProgressScroll />
         {/* Main content area with a gradient background */}
-        <div className="bg-gradient from-white dark:from-black to-light dark:tog-dark w-full flex flex-col">
+        <div
+          className="bg-gradient from-white dark:from-black to-light dark:tog-dark w-full flex flex-col "
+          id="smooth-wrapper"
+          ref={main}
+        >
           {/* <Header /> */}
           <FirstPage />
 

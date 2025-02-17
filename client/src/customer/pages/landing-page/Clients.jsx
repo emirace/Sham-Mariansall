@@ -85,10 +85,10 @@ function Clients() {
             </SwiperSlide>
           </Swiper>
         </div>
-        <div className="sec-bottom mt-24 sm:mt-16">
-          <div className="main-bg flex items-center justify-center text-center p-4 sm:p-2">
-            <h6 className="text-lg sm:text-sm font-normal">
-              More than <span className="font-semibold">200+ companies</span>{" "}
+        <div className="sec-bottom mt-100">
+          <div className="main-bg d-flex align-items-center">
+            <h6 className="fz-14 fw-400">
+              More than <span className="fw-600"> 200+ companies</span>
               trusted us worldwide
             </h6>
           </div>

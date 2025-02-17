@@ -100,7 +100,7 @@ function Services() {
                   </div>
                   <h5 className="mb-15">{item.title}</h5>
                   <p>{item.desc}</p>
-                  <a href={item.link} className="rmore mt-30">
+                  <a href={item.link} className="rmore mt-30 flex">
                     <span className="sub-title">Read More</span>
                     <img
                       src="/assets/imgs/arrow-right.png"

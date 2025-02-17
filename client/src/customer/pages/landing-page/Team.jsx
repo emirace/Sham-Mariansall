@@ -33,7 +33,7 @@ function Team() {
                     <h6 className="fz-18">{item.name}</h6>
                   </div>
                 </div>
-                <div className="social">
+                <div className="social flex">
                   <div className="links">
                     <a href="#0">
                       <i className="fab fa-facebook-f"></i>
