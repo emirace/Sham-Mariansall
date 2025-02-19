@@ -1204,9 +1204,9 @@ figure {
   -webkit-transform-origin: 50% 0%;
   -ms-transform-origin: 50% 0%;
   transform-origin: 50% 0%;
-  -webkit-transform: translate3d(0px, 50px, -50px) rotateX(-45deg) scale(0.95);
-  transform: translate3d(0px, 50px, -50px) rotateX(-45deg) scale(0.95);
-  opacity: 0;
+  -webkit-transform: translate3d(0px, 0px, 0px) rotateX(0deg) scale(1);
+  transform: translate3d(0px, 0px, 0px) rotateX(0deg) scale(1);
+  opacity: 1;
   -webkit-transition-delay: 0.5s;
   -o-transition-delay: 0.5s;
   transition-delay: 0.5s;

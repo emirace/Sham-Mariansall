@@ -24,7 +24,7 @@ function Clients() {
   };
   return (
     <section className="clients-carso section-padding pt-0">
-      <div className="container">
+      <div className="containery">
         <div className="row justify-content-center">
           <div className="col-lg-6 col-md-10">
             <div className="sec-head text-center mb-80">
