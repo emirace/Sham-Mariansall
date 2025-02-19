@@ -41,52 +41,16 @@ function Footer() {
               <h6 className="sub-title mb-30">Useful Links</h6>
               <ul className="rest fz-14 opacity-7">
                 <li className="mb-15">
-                  <a
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                    href="/page-about"
-                  >
-                    About
-                  </a>
+                  <a href="/page-about">About</a>
                 </li>
                 <li className="mb-15">
-                  <a
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                    href="/page-services"
-                  >
-                    Services
-                  </a>
+                  <a href="/page-services">Services</a>
                 </li>
                 <li className="mb-15">
-                  <a
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                    href="/blog-grid-sidebar"
-                  >
-                    Blog
-                  </a>
+                  <a href="/blog-grid-sidebar">Blog</a>
                 </li>
                 <li>
-                  <a
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                    href="/page-contact"
-                  >
-                    Contact
-                  </a>
+                  <a href="/page-contact">Contact</a>
                 </li>
               </ul>
             </div>
@@ -102,22 +66,54 @@ function Footer() {
               </div>
               <ul className="rest social-icon d-flex align-items-center">
                 <li className="hover-this cursor-pointer">
-                  <a href="#0" className="hover-anim">
+                  <a
+                    href="#0"
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                    className="hover-anim"
+                  >
                     <i className="fab fa-facebook-f"></i>
                   </a>
                 </li>
                 <li className="hover-this cursor-pointer ml-10">
-                  <a href="#0" className="hover-anim">
+                  <a
+                    href="#0"
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                    className="hover-anim"
+                  >
                     <i className="fab fa-dribbble"></i>
                   </a>
                 </li>
                 <li className="hover-this cursor-pointer ml-10">
-                  <a href="#0" className="hover-anim">
+                  <a
+                    href="#0"
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                    className="hover-anim"
+                  >
                     <i className="fab fa-linkedin-in"></i>
                   </a>
                 </li>
                 <li className="hover-this cursor-pointer ml-10">
-                  <a href="#0" className="hover-anim">
+                  <a
+                    href="#0"
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                    className="hover-anim"
+                  >
                     <i className="fab fa-instagram"></i>
                   </a>
                 </li>
