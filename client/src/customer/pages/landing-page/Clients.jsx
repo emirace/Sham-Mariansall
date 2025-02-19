@@ -23,7 +23,10 @@ function Clients() {
     },
   };
   return (
-    <section className="clients-carso section-padding pt-0">
+    <section
+      className="clients-carso section-padding pt-0"
+      style={{ overflow: "hidden" }}
+    >
       <div className="containery">
         <div className="row justify-content-center">
           <div className="col-lg-6 col-md-10">
