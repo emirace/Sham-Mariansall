@@ -35,13 +35,34 @@ function Team() {
                 </div>
                 <div className="social flex">
                   <div className="links">
-                    <a href="#0">
+                    <a
+                      href="#0"
+                      style={{
+                        justifyContent: "center",
+                        alignItems: "center",
+                        display: "flex",
+                      }}
+                    >
                       <i className="fab fa-facebook-f"></i>
                     </a>
-                    <a href="#0">
+                    <a
+                      href="#0"
+                      style={{
+                        justifyContent: "center",
+                        alignItems: "center",
+                        display: "flex",
+                      }}
+                    >
                       <i className="fab fa-behance"></i>
                     </a>
-                    <a href="#0">
+                    <a
+                      href="#0"
+                      style={{
+                        justifyContent: "center",
+                        alignItems: "center",
+                        display: "flex",
+                      }}
+                    >
                       <i className="fab fa-instagram"></i>
                     </a>
                   </div>
