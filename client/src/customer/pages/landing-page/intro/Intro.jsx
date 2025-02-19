@@ -3,13 +3,23 @@ import React from "react";
 function Intro() {
   return (
     <section className="intro section-padding">
-      <div className="container">
+      <div
+        style={{
+          width: "100%",
+          paddingLeft: "0.75rem",
+          paddingRight: "0.75rem",
+        }}
+      >
         <div className="row lg-marg">
           <div className="col-lg-8 md-mb80">
             <div className="row lg-marg align-items-center">
               <div className="col-md-6">
                 <div className="img1 sm-mb50">
-                  <img src="/assets/imgs/intro/04.webp" alt="" />
+                  <img
+                    style={{ width: "80%" }}
+                    src="/assets/imgs/intro/04.webp"
+                    alt=""
+                  />
                 </div>
               </div>
               <div className="col-md-6">

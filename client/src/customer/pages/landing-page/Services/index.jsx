@@ -57,7 +57,13 @@ function Services() {
   };
   return (
     <section className="services section-padding overflow-hidden">
-      <div className="container">
+      <div
+        style={{
+          width: "100%",
+          paddingLeft: "0.75rem",
+          paddingRight: "0.75rem",
+        }}
+      >
         <div className="sec-head mb-80">
           <div className="d-flex align-items-center">
             <div>

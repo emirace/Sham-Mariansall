@@ -3,7 +3,13 @@ import data from "../../../data/team.json";
 function Team() {
   return (
     <section className="team section-padding pt-0">
-      <div className="container">
+      <div
+        style={{
+          width: "100%",
+          paddingLeft: "0.75rem",
+          paddingRight: "0.75rem",
+        }}
+      >
         <div className="sec-head mb-80">
           <div className="d-flex align-items-center">
             <div>

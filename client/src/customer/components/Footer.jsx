@@ -3,7 +3,14 @@ import React from "react";
 function Footer() {
   return (
     <footer className="clean-footer crev">
-      <div className="container pb-40 pt-40 ontop">
+      <div
+        className="pb-40 pt-40 ontop"
+        style={{
+          width: "100%",
+          paddingLeft: "0.75rem",
+          paddingRight: "0.75rem",
+        }}
+      >
         <div className="row justify-content-between">
           <div className="col-lg-2">
             <div className="logo icon-img-100 md-mb80">
@@ -34,16 +41,52 @@ function Footer() {
               <h6 className="sub-title mb-30">Useful Links</h6>
               <ul className="rest fz-14 opacity-7">
                 <li className="mb-15">
-                  <a href="/page-about">About</a>
+                  <a
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                    href="/page-about"
+                  >
+                    About
+                  </a>
                 </li>
                 <li className="mb-15">
-                  <a href="/page-services">Services</a>
+                  <a
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                    href="/page-services"
+                  >
+                    Services
+                  </a>
                 </li>
                 <li className="mb-15">
-                  <a href="/blog-grid-sidebar">Blog</a>
+                  <a
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                    href="/blog-grid-sidebar"
+                  >
+                    Blog
+                  </a>
                 </li>
                 <li>
-                  <a href="/page-contact">Contact</a>
+                  <a
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                    href="/page-contact"
+                  >
+                    Contact
+                  </a>
                 </li>
               </ul>
             </div>
