@@ -28,7 +28,7 @@ function Clients() {
         <div className="row justify-content-center">
           <div className="col-lg-6 col-md-10">
             <div className="sec-head text-center mb-80">
-              <h3 style={{ fontSize: "12px" }}>
+              <h3>
                 We&lsquo;re proud to work with <br /> a{" "}
                 <span className="opacity-7">diverse range of companies.</span>
               </h3>
@@ -87,7 +87,7 @@ function Clients() {
         </div>
         <div className="sec-bottom mt-100">
           <div className="main-bg d-flex align-items-center">
-            <h6 className="fz-14 fw-400">
+            <h6 className="fz-14 fw-400" style={{ fontSize: "12px" }}>
               More than <span className="fw-600"> 200+ companies</span>
               trusted us worldwide
             </h6>
