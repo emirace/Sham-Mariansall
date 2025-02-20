@@ -95,6 +95,13 @@ function Clients() {
                 </div>
               </div>
             </SwiperSlide>
+            <SwiperSlide>
+              <div className="item">
+                <div className="img icon-img-100">
+                  <img src="/assets/imgs/brands/c2.svg" alt="" />
+                </div>
+              </div>
+            </SwiperSlide>
           </Swiper>
         </div>
         <div className="sec-bottom mt-100">
