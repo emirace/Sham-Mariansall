@@ -27,7 +27,16 @@ function Clients() {
       className="clients-carso section-padding pt-0"
       style={{ overflow: "hidden" }}
     >
-      <div className="containery">
+      <div
+        style={{
+          width: "100%",
+          paddingLeft: "0.75rem",
+          paddingRight: "0.75rem",
+          maxWidth: "1280px",
+          marginRight: "auto",
+          marginLeft: "auto",
+        }}
+      >
         <div className="row justify-content-center">
           <div className="col-lg-6 col-md-10">
             <div className="sec-head text-center mb-80">

@@ -62,6 +62,9 @@ function Services() {
           width: "100%",
           paddingLeft: "0.75rem",
           paddingRight: "0.75rem",
+          maxWidth: "1280px",
+          marginRight: "auto",
+          marginLeft: "auto",
         }}
       >
         <div className="sec-head mb-80">
