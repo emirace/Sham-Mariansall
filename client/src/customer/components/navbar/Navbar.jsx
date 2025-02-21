@@ -31,7 +31,7 @@ function ClientNavbar() {
       to={item.url}
       onClick={closeNav}
       color="primary"
-      variant={item.url === currentPathname ? "flat" : "light"}
+      variant={"light"}
       className="w-fit dark:text-white capitalize"
     >
       {t(item.title)}

@@ -16,10 +16,10 @@ const ClientNavbar = lazy(() =>
 // Store page component rendering categories, subcategories, products list, and pagination
 const StorePage = () => (
   <>
-    <ul className="flex flex-col gap-5">
+    {/* <ul className="flex flex-col gap-5">
       <Categories />
       <SubCategories />
-    </ul>
+    </ul> */}
     <ProductsList />
     <PaginationCursor />
   </>

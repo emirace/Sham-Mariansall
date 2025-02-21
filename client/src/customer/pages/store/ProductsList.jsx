@@ -8,63 +8,19 @@ import Video from "./products/Video";
 import { Popover, PopoverContent, PopoverTrigger } from "@nextui-org/react";
 import CheckCircleRoundedIcon from "@mui/icons-material/CheckCircleRounded";
 import cartStore from "../../../store/cartStore";
+import Card from "./products/card";
 
 function ProductsList() {
   // Destructuring values from the productStore
   const {
     getProductsByCategory,
     getProductsBySubcategory,
-    // productList,
+    productList,
     page,
     searchValue,
     getProductsBySearch,
     searchedProduct,
   } = productStore();
-
-  const productList = [
-    {
-      _id: "1",
-      product_name: "Relaxing Beats",
-      product_type: "audio",
-      product_files: ["relaxing-beats-cover.jpg", "relaxing-beats.mp3"],
-      price: 9.99,
-      active: true,
-    },
-    {
-      _id: "2",
-      product_name: "Modern Serif Font",
-      product_type: "font",
-      product_files: ["modern-serif-preview.jpg", "modern-serif.ttf"],
-      price: 14.99,
-      active: true,
-    },
-    {
-      _id: "3",
-      product_name: "Mountain Landscape",
-      product_type: "image",
-      product_files: ["mountain-landscape.jpg"],
-      price: 5.99,
-      active: true,
-    },
-    {
-      _id: "4",
-      product_name: "Mastering JavaScript",
-      product_type: "pdf",
-      product_files: ["javascript-guide.pdf"],
-      subcategory_name: "courses",
-      price: 19.99,
-      active: true,
-    },
-    {
-      _id: "5",
-      product_name: "Intro to Python",
-      product_type: "video",
-      product_files: ["intro-python-thumbnail.jpg", "intro-python.mp4"],
-      subcategory_name: "programming",
-      price: 29.99,
-      active: true,
-    },
-  ];
 
   // Destructuring values from the cartStore
   const { itemAdded, closeItemAdded } = cartStore();
@@ -162,10 +118,38 @@ function ProductsList() {
   // JSX for the product list
   return (
     <>
+      <div className="sec-head mb-80" style={{ marginTop: "80px" }}>
+        <div className="d-flex align-items-center">
+          <div>
+            <span className="sub-title main-color mb-5 ">Our Stock</span>
+            <h3 className="fw-600 fz-50 text-u d-rotate wow">
+              <span className="rotate-text">
+                Trending <span className="fw-200">Stock.</span>
+              </span>
+            </h3>
+          </div>
+          <div className="ml-auto vi-more flex">
+            <a href="/page-team" className="butn butn-sm butn-bord radius-30">
+              <span>View all</span>
+            </a>
+            <span
+              className="icon ti-arrow-top-right"
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            ></span>
+          </div>
+        </div>
+      </div>
       <div className="min-h-screen grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8 py-5">
+        {[...Array(12)].map((product, index) => (
+          <Card key={index} />
+        ))}
         {searchedProduct.length === 0
           ? productList.map((product, index) =>
-              // Rendering different components based on product type
+              // Rendebring different components based on product type
               product.active && product?.product_type === "audio" ? (
                 <Audio
                   key={index}
@@ -258,9 +242,9 @@ function ProductsList() {
                 ""
               )
             )}
-        {searchedProduct.length <= 0 && productList.length <= 0 && (
+        {/* {searchedProduct.length <= 0 && productList.length <= 0 && (
           <div className="w-full text-center">No product available</div>
-        )}
+        )} */}
       </div>
       {/* Render the added message*/}
       {/* {addedMessage} */}
