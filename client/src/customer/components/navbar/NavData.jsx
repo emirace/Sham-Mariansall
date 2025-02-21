@@ -26,10 +26,6 @@ const navData = [
     url: "/blog",
   },
   {
-    title: "about us",
-    url: "/about-us",
-  },
-  {
     title: "contact us",
     url: "/contact-us",
   },
