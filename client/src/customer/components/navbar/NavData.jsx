@@ -3,6 +3,7 @@ const navData = [
   {
     title: "home",
     url: "/",
+    sub: [{ title: "about us", url: "/about-us" }],
   },
   {
     title: "services",
