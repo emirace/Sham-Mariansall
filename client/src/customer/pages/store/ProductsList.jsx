@@ -14,12 +14,57 @@ function ProductsList() {
   const {
     getProductsByCategory,
     getProductsBySubcategory,
-    productList,
+    // productList,
     page,
     searchValue,
     getProductsBySearch,
     searchedProduct,
   } = productStore();
+
+  const productList = [
+    {
+      _id: "1",
+      product_name: "Relaxing Beats",
+      product_type: "audio",
+      product_files: ["relaxing-beats-cover.jpg", "relaxing-beats.mp3"],
+      price: 9.99,
+      active: true,
+    },
+    {
+      _id: "2",
+      product_name: "Modern Serif Font",
+      product_type: "font",
+      product_files: ["modern-serif-preview.jpg", "modern-serif.ttf"],
+      price: 14.99,
+      active: true,
+    },
+    {
+      _id: "3",
+      product_name: "Mountain Landscape",
+      product_type: "image",
+      product_files: ["mountain-landscape.jpg"],
+      price: 5.99,
+      active: true,
+    },
+    {
+      _id: "4",
+      product_name: "Mastering JavaScript",
+      product_type: "pdf",
+      product_files: ["javascript-guide.pdf"],
+      subcategory_name: "courses",
+      price: 19.99,
+      active: true,
+    },
+    {
+      _id: "5",
+      product_name: "Intro to Python",
+      product_type: "video",
+      product_files: ["intro-python-thumbnail.jpg", "intro-python.mp4"],
+      subcategory_name: "programming",
+      price: 29.99,
+      active: true,
+    },
+  ];
 
   // Destructuring values from the cartStore
   const { itemAdded, closeItemAdded } = cartStore();
