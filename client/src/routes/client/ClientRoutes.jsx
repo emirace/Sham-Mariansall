@@ -5,6 +5,7 @@ import PaymentSuccess from "../../customer/pages/payment/PaymentSuccess";
 import PaymentFailed from "../../customer/pages/payment/PaymentFailed";
 import Blogs from "../../customer/pages/Blogs";
 import Details from "../../customer/pages/Blogs/Detail";
+import PortfolioGrid from "../../customer/pages/portfolio";
 
 // Lazy-loaded components
 const ClientNavbar = lazy(() =>
@@ -50,6 +51,12 @@ function ClientRoutes() {
 
         {/* About Us page route */}
         <Route path="/about-us" element={<AboutUs />} />
+
+        {/* Portfolio page route */}
+        <Route path="/portfolio" element={<PortfolioGrid />} />
+        
+        {/* Project Details page route */}
+        {/* <Route path="/project-details" element={<project-details />} /> */}
 
         {/* Blogs route */}
         <Route path="/blog" element={<Blogs />} />

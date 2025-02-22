@@ -10,16 +10,16 @@ const navData = [
   },
   {
     title: "portfolio",
-    url: "/",
+    url: "/portfolio",
   },
   {
     title: "stock",
     url: "/store",
   },
-  // {
-  //   title: "how it works",
-  //   url: "/how-it-works",
-  // },
+  {
+    title: "how it works",
+    url: "/how-it-works",
+  },
   {
     title: "Blog",
     url: "/blog",

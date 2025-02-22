@@ -5,6 +5,8 @@ import blogStore from "../../../store/blogStore";
 import { Spinner } from "@nextui-org/react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Footer from "../../components/Footer";
+import Marq2 from "../landing-page/marq/marq2";
 
 function Blogs() {
   const { blogList, getBlogs, loading } = blogStore();
@@ -284,6 +286,8 @@ function Blogs() {
           </div>
         </div>
       </section>
+      <Marq2 />
+      <Footer />
     </div>
   );
 }
