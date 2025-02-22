@@ -54,7 +54,7 @@ function ClientRoutes() {
 
         {/* Portfolio page route */}
         <Route path="/portfolio" element={<PortfolioGrid />} />
-        
+
         {/* Project Details page route */}
         {/* <Route path="/project-details" element={<project-details />} /> */}
 

@@ -3,6 +3,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import Footer from "../../components/Footer";
 import howItWorksData from "./HowItWorksData";
 import { useTranslation } from "react-i18next";
+import Marq2 from "../landing-page/marq/marq2";
 
 // Define the functional component HowItWorks
 function HowItWorks() {
@@ -53,10 +54,8 @@ function HowItWorks() {
   return (
     <>
       {/* Hero section with cover image */}
-      <div
-        className="lg relative after:absolute after:w-full after:h-full after:bg-gradient-to-t after:from-white dark:after:from-black after:to-transparent after:left-0 after:top-0"
-      >
-        <div className="h-64 md:h-80 lg:h-96 w-full relative after:absolute after:w-full after:h-full after:bg-gradient-to-t after:from-white dark:after:from-black after:to-transparent after:left-0 after:top-0">
+      <div className="lg relative after:absolute after:w-full after:h-full after:left-0 after:top-0">
+        <div className="h-64 md:h-80 lg:h-96 w-full relative after:absolute after:w-full after:h-full after:left-0 after:top-0">
           {/* Lazy-loaded cover image */}
           <LazyLoadImage
             src={coverImage}
@@ -76,7 +75,7 @@ function HowItWorks() {
         {/* Render the steps component */}
         {steps}
       </div>
-
+      <Marq2 />
       {/* Render the Footer component */}
       <Footer />
     </>
