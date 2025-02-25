@@ -7,6 +7,7 @@ import ProductsList from "../../customer/pages/store/ProductsList";
 import PaginationCursor from "../../customer/pages/store/Pagination";
 import { Progress } from "@nextui-org/react";
 import productStore from "../../store/products/productStore";
+import Hero from "../../customer/pages/landing-page/Hero";
 
 // Lazy-loaded components
 const ClientNavbar = lazy(() =>
@@ -20,8 +21,11 @@ const StorePage = () => (
       <Categories />
       <SubCategories />
     </ul> */}
-    <ProductsList />
-    <PaginationCursor />
+    <Hero />
+    <div className="store-container px-4">
+      <ProductsList />
+      <PaginationCursor />
+    </div>
   </>
 );
 
@@ -49,7 +53,7 @@ function StoreRoutes() {
       <ClientNavbar />
 
       {/* Main store container */}
-      <div className="pt-24 store-container px-4">
+      <div className="pt-24 ">
         <Routes>
           {/* Default route: renders the StorePage component */}
           <Route path="/" element={<StorePage />} />

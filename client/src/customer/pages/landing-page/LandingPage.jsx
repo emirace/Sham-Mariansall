@@ -1,13 +1,11 @@
 // Import necessary dependencies and components
 import { useEffect, useRef } from "react";
 import Footer from "../../components/Footer";
-import QuickLinks from "../../components/quick-links/QuickLinks";
 import AOS from "aos"; // Import AOS (Animate On Scroll) library
 import "aos/dist/aos.css"; // Import AOS styles
 import Intro from "./intro/Intro";
 import FirstPage from "./firstPage/firstPage";
 import Marq from "./marq/marq";
-import Portfolio from "./portfolio/portfolio";
 import Feat from "./Feat";
 import Team from "./Team";
 import Testimonials from "./Testimonials";
